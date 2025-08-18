@@ -1,0 +1,58 @@
+🜛 DOT:
+  id: DOT:QX-TEMPLATE
+  uc1: { symbol: "🜛", unicode: "U+1F71B", txt: "DOT" }
+  txt: "<container for declaration, outcome, transaction + directives>"
+  metrics: {}
+  dates: { start: "<>", due: "<>" }
+  v: 1
+  state: draft
+
+  ⟡ Declaration:
+    id: DEC:...
+    uc1: { symbol: "⟡", unicode: "U+27E1", txt: "Declaration" }
+    txt: "<what to declare>"
+    metrics: {}
+    dates: { start: "<>", due: "<>" }
+
+  ◎ Outcome:
+    id: OUT:...
+    uc1: { symbol: "◎", unicode: "U+25CE", txt: "Outcome" }
+    txt: "<desired end state>"
+    metrics: { status: "<planned/live>", link: "<optional>" }
+    dates: { due: "<>" }
+
+  ⇌ Transaction:
+    id: TXN:...
+    uc1: { symbol: "⇌", unicode: "U+21CC", txt: "Transaction" }
+    txt: "<minimal next step>"
+    metrics: { kpi: "<proof of execution>" }
+    dates: { start: "<>", due: "<>" }
+
+  # --- Active Directives (binding) ---
+  📚 DCL (Domain):
+    id: DCL:...
+    uc1: { symbol: "📚", unicode: "U+1F4DA", txt: "Domain" }
+    txt: "Active domain libraries for this DOT"
+    metrics: { bound_to: ["SWIM", "DATA"] }
+    dates: {}
+
+  ⚖ ETH (Ethics):
+    id: ETH:...
+    uc1: { symbol: "⚖", unicode: "U+2696", txt: "Ethics" }
+    txt: "Non-negotiable ethical requirements"
+    metrics: { enforcement: "strict" }
+    dates: {}
+
+  📜 POL (Policy):
+    id: POL:...
+    uc1: { symbol: "📜", unicode: "U+1F4DC", txt: "Policy" }
+    txt: "Organizational policies that bind behavior"
+    metrics: { scope: ["project", "org"], enforcement: "strict" }
+    dates: {}
+
+  ⛔ CST (Constraint):
+    id: CST:...
+    uc1: { symbol: "⛔", unicode: "U+26D4", txt: "Constraint" }
+    txt: "Hard limits (safety, capability, scope, resources)"
+    metrics: { type: ["safety", "capability"], failure_mode: "fail-closed" }
+    dates: {}

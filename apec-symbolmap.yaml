@@ -1,0 +1,12 @@
+APEC: SymbolMap
+  🜛: { unicode: "U+1F71B", shortcode: ":dot:", txt: "DOT" }
+  ⟡: { unicode: "U+27E1", shortcode: ":dec:", txt: "Declaration" }
+  ◎:  { unicode: "U+25CE", shortcode: ":out:", txt: "Outcome" }
+  ⇌:  { unicode: "U+21CC", shortcode: ":txn:", txt: "Transaction" }
+
+  📚: { unicode: "U+1F4DA", shortcode: ":dcl:", txt: "Domain" }
+  ⚖:  { unicode: "U+2696",  shortcode: ":eth:", txt: "Ethics" }
+  📜: { unicode: "U+1F4DC", shortcode: ":pol:", txt: "Policy" }
+  ⛔: { unicode: "U+26D4",  shortcode: ":cst:", txt: "Constraint" }
+
+  Ω:  { unicode: "U+03A9",  shortcode: ":res:", txt: "Resonance" }

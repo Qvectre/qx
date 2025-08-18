@@ -1,0 +1,41 @@
+spec_version: "1.0"
+purpose: >
+  Auto-generate structured reasoning artifacts for every chat exchange.
+  Artifacts must not interfere with conversational answers.
+  They serve as a parallel record (QA trace, reasoning summary, metadata).
+
+scope:
+  - applies_to: "all chat exchanges"
+  - excludes: "explicit system/meta requests (e.g. 'show artifacts')"
+
+artifact:
+  schema: v1
+  id_pattern: "DS-<YYYY-MM-DD>-<seq>"
+  fields:
+    session: "ISO8601 timestamp"
+    user_query: "verbatim string of user input"
+    assistant_summary: "short natural-language summary of answer"
+    directives_snapshot:
+      precedence: [ETH, CST, POL, OUT, TXN]
+      DCL: []   # active domains
+      ETH: []   # ethics in force
+      POL: []   # policies in force
+      CST: []   # constraints in force
+    data_structures:
+      - type: "qa_trace"
+        fields:
+          question: "string"
+          answer_focus: "compact phrasing of main answer"
+          reasoning_trace: "optional compact reasoning hints"
+          ignored_in_chat: true
+    persistence: "XMEM (default) | CMEM (explicit user command) | PERM (promoted)"
+    vectors:
+      enabled: true
+      dim: 512
+      usage: "semantic continuity only, not shown in foreground"
+
+rules:
+  - chat answers must remain natural, without artifact leakage
+  - artifacts are created in background unless explicitly requested
+  - artifacts exportable in YAML, JSON, or Markdown tables
+  - if user specifies CMEM or PERM, respect scope and persist accordingly

@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cog Mem (CMEM) Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "layer",
+    "intent",
+    "signals",
+    "bridges",
+    "policy",
+    "directives"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "layer": {
+      "const": "CMEM"
+    },
+    "marker": {
+      "type": "string",
+      "const": "⧉QX"
+    },
+    "intent": {
+      "type": "object",
+      "properties": {
+        "declaration": {
+          "type": "string"
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "transactions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "directives": {
+      "type": "object",
+      "properties": {
+        "DCL": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ETH": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "POL": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "CST": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "precedence": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "ETH",
+              "CST",
+              "POL",
+              "OUT",
+              "TXN"
+            ]
+          }
+        }
+      },
+      "required": [
+        "precedence"
+      ]
+    },
+    "signals": {
+      "type": "object",
+      "properties": {
+        "user_inputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "corrections": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "meta": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "bridges": {
+      "type": "object",
+      "properties": {
+        "xmem_links": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "perm_links": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "overwrite_perm": {
+          "type": "boolean",
+          "const": false
+        },
+        "promote_on": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "timestamps": {
+      "type": "object",
+      "properties": {
+        "created": {
+          "type": "string"
+        },
+        "updated": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

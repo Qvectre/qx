@@ -1,0 +1,8 @@
+# PUA mappings (do not echo in front pages; use only when explicitly requested)
+APEC: PUA
+  qv:
+    canonical_codepoint: "U+E002"
+    alias_codepoint: "U+E8D3"
+    name: "State/Vector"
+    resolution_tokens: ["Qvectre","qv","U+E002","U-E8D3",":qv:"]
+    security_note: "Do not display PUA codepoints unless explicitly requested."

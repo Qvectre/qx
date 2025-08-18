@@ -1,0 +1,20 @@
+# Initialization of Memory:
+
+## Persistent vs Temporary Working Memory
+
+Insruction: User-> Run this Prompt in GPT-5
+
+'''
+Add this to bio memory pmem exactly without change.
+
+Memory preference: Use literal strings "XMEM" and "PMEM" (case-insensitive) to control storage. XMEM = session-only; do NOT call bio.update. PMEM= persistent; DO call bio.update. If both appear, save to BOTH (same artifact unless separately scoped). If neither appears, default to xmem. Never infer pmem from verbs like capture/store/maintain.
+'''
+
+## Initialize Qx notation
+
+'''
+add this to PMEM eactly
+
+
+
+

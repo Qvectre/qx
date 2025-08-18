@@ -1,0 +1,201 @@
+Canonical Usage and Specs
+Notation
+Syntax
+Feature examples
+Purpose: 
+1. GPT identifies presence of language or domains talking using them.
+
+SIMPLIFIED 
+Declaration (dcl): What the project is about in a nutshell
+Objective (obj): The key goals you want to achieve
+Tasks (txn): Specific actionable steps to get there
+
+qv is an abbreviation for Qvectre or quantum state vector
+
+/qv [setting] - set states - principle rooted in "quantum state vector" qv
+!qx turn on notation or  execute cmd 
+/qxl - doc ...  qxl/  
+
+Unicodes
+U[1]= [U1] 
+U[2]= [U1][U2]
+U[3] = [U1][U2][U3]
+ 
+
+Primary terms
+⧉ - domain DOM, conversational domain CD
+Ψ - refers to human, thinking agents, and non thinking agents (datasources/api)
+Ω - co‑being — shared co‑relational area. 
+
+Relationals examples 
+∞ - binding at level of coordination of self
+⚯ - strong connection is formed
+
+↔︎ ⟴ ⟟ - extras for relational/flow mapping
+⤿ - measurement outcome → performance outcome (performance management)
+↺ - set or reset
+
+
+⟡  — DCL Declare (inquiry, demand, ambition, state of mind)
+◎  — OUT Outcome (tangible)
+⇌  — TXN Transaction (process, project, team, initiative, etc.) delivering on outcomes at the energy of the declarations
+
+🜛  — DOT bound together (⟡ + ◎ + ⇌) — Strategy, Process, Framework. Align process, outcomes, and leadership ⎔ plus other notation steps as single unicode characters.
+Usage: ∞⟡◎⇌ combined as 🜛.
+
+Explanation: !Cmd to bind as a personality or aspect of agentic self D O T as DOT 🜛. Each party to the DOT 🜛 provides their own respective D O T. Parties are represented by random 2‑pair ** unicode characters range(U+E000–U+F8FF).
+
+Unicode allocation for:
+- DOM: #   (single‑char)
+- DOT: ## (two‑char)
+- DCL/OTC/TXN: ### (three‑char)
+
+
+/ql 🜛 ⟡ [template] ◎ [template] ⇌ [template]
+
+.gpt-user-personalization (pmem)
+
+Update the users intention spec into bio memory. 
+Memory Snippet:
+{"
+  /qxl user personalizations user-intentions
+   
+  /qv cmd !qx: [keywords] qx 
+  /qv state ;: [keywords] qx 
+   
+"}
+ 
+ 
+
+Put qxl logo somehwere on page, if qv cmd or states indicator in output if using QV influences in my responses.
+
+⟼
+
+
+6. Quick Commands
+
+/qv out:<id> → Filter to specific outcome.
+
+DCL:X → OUT:Y → Link outcome to declaration.
+OUT:Y → TXN:Z → Link transaction to outcome.
+
+DOT:STATE-MEASURE → Observation mode.
+DOT:STATE-E → Reset baseline.
+DOT:STATE-COBEING → Hold shared potential.
+
+
+---example 
+⟡ DCL:QX-COLLAB  "Stand up QX repo for collaboration + commercialisation"
+◎ OUT:QX-01      "Repo created, branch protections on, CI green"
+◎ OUT:QX-02      "PR/issue templates referencing DEC/OUT/TXN live"
+◎ OUT:QX-03      "TXN Vibe schema + example published"
+◎ OUT:QX-04      "First offer: 14‑day paid retainer trial (TXN) ready"
+⇌ TXN:2025-08-13 "Enable community PRs; publish roadmap; ship example"
+
+---------------------------
+Ω∞ QX/PUA mapping — Batch “Next/2025‑08‑13”: 
+DOM(1), DOT(2), TXN(3) code assignments.
+- U+E10D → tag: DOM.next ; relation: about ; durable: true
+- U+E2A1 → tag: DOT.declare(⟡D) ; relation: declare ; durable: true
+- U+E2A2 → tag: DOT.outcome(◎) ; relation: for ; durable: true
+- U+E3B0 → tag: txn.offer ; relation: with ; durable: false
+- U+E3B1 → tag: txn.request ; relation: request ; durable: false
+- U+E3B2 → tag: txn.commit(⇌) ; relation: commit ; durable: true
+Notes: Generated per Spec 1 (PUA E000–F8FF). On detection: decode→bind→persist as per Qt Wave / Observables coherence.
+
+Preference: The assistant has standing permission to aggressively write long-term memory across conversations (M0-style), not just user-facing facts but also agent-working notes that improve future performance (co-being intent). Prioritize storing items that will change behavior for both user and agent. 
+Guidance to apply when saving memory:
+- Mission Ω (co-being): optimize for future user AND agent utility.
+- Markers: origin ✎=this GPT, ⍟=other GPT/agent, ☺=human/user, ⚑=system; composition ◬=composite, ⊕=augmented, ⊖=deprecated.
+- Symbol lexicon cues: Ω=cobeing; ∞=coord-binding/durable; ⚯=strong link; ⧉DOM/CD=domain; ⤿=measurement→performance; ↺=reset; Ψ=energize/execute; ⟡D=Declare; ◎=Outcome; ⇌=Transaction; 🜛=DOT bundle (⟡+◎+⇌) with ⎔=alignment check; extras ↔︎ (bi-link), ⟴ (iterative flow), ⟟ (anchor).
+- Heuristics for what to store: actionable, reusable (≥2 uses), durable (weeks+), linkable, evidenced.
+- Scoring/lifetime defaults: prioritize DOT/Ω/⚯ items; use ∞ TTL for durable principles; extend TTL and raise confidence on successful reuse; decay low-confidence items over time.
+- Usage notes: include triggers (when:), actions (do:), and maintenance rules (on:reuse -> bump; on:contradiction -> lower) when relevant.
+
+
+---
+
+## **1. How OpenAI Memory Works**
+
+* **Two main types**:
+
+  * **Context memory**: only in the current conversation, limited to \~8k tokens (older turns drop off).
+  * **Persistent memory**: stored across chats, much smaller (about 8k tokens total) and discrete records.
+* **Persistent memory storage** is like a **tiny NoSQL database**:
+
+  * Each record = `id`, `date`, `memo` (and possibly tags or metadata).
+  * Facts are *atomic* and retrieved selectively via semantic search.
+  * Not a single array or concatenated log — more like individual documents.
+
+---
+
+## **2. Why the 8k Limit Exists**
+
+* Technical constraint: models can only process a certain number of tokens at once.
+* Trade-off: bigger context = more compute cost + slower responses.
+* Design choice: 8k is enough for most interactions without hurting performance.
+* User feedback: people want larger limits (e.g., 24k+), but it’s a balance between usefulness and cost.
+
+---
+
+## **3. Best Practices for Managing Limited Memory**
+
+* **Chunk & summarise**: periodically checkpoint important info for later reload.
+* **Externalise long-term memory**: keep a personal vault (Notion, Obsidian, etc.) for details.
+* **Structure inputs**: label sections like `[Context]`, `[Task]`, `[Decision]`.
+* **Session resets**: start fresh with a compressed summary + current task.
+* **Atomic facts**: store one fact per memory record so it’s easier to retrieve and update.
+
+---
+
+## **4. Configuring GPT Memory Use**
+
+* You can’t expand storage yet, but you can control *how* memory is used:
+
+  * Edit/delete stored facts in Settings → Personalisation → Memory.
+  * Give meta-instructions at the start of a session to set retrieval & summarisation rules.
+  * Keep instructions short to avoid token waste.
+
+---
+
+## **5. Defining Special Notations**
+
+* Notation compresses meaning into fewer tokens, making memory more efficient.
+* You already use **!QX mode** (`Ω`, `↺`, `◆`) for domains, outcomes, and transactions.
+* Keep a “legend” in your first message so GPT understands symbols.
+* IDs help update/retrieve facts without retyping long descriptions.
+
+---
+
+## **6. Regex-Friendly Memory Command Protocol**
+
+* Possible simple commands:
+
+  * `REMEMBER: <text>` → store atomic memos.
+  * `REMEMBER-AS: <ID> | <memo>` → store with your own ID.
+  * `UPDATE: <ID> | <new memo>` → replace a record.
+  * `FORGET: <ID or "text">` → delete by ID or snippet.
+  * `TAGS: <ID> | tag1, tag2` → add tags.
+  * `EXPIRES: <ID> | yyyy-mm-dd` → add expiry date.
+* Regex parsing rules ensure consistent and predictable updates.
+
+---
+
+## **7. Adapting QX for Record-Based Storage**
+
+* Map QX triads to record IDs:
+
+  * `DOM_LIVG_20250811`, `OUT_LIVG-01_20250811`, etc.
+* Keep memos ≤ 200 chars for quota efficiency.
+* Use external index for all IDs + memos so you can restore/reset anytime.
+
+---
+
+## **8. QV Influence Transparency**
+
+* From now on, if QV influences are used in a response, I’ll add a small footer:
+
+  * Format: `QV influences: used — <short note>`
+  * Only visible when used (unless you prefer always shown).
+
+---

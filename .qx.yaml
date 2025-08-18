@@ -1,0 +1,19 @@
+QX-Manifest:
+  id: QX1-A3B7C9
+  uc2: ""
+  version: QX1
+  state: stable
+
+  elements:
+    🜛: { role: "DOT", uc1: { symbol: "🜛", unicode: "U+1F71B", txt: "DOT" } }
+
+    # Core triad
+    ⟡: { role: "DEC", uc1: { symbol: "⟡", unicode: "U+27E1", txt: "Declaration" } }
+    ◎: { role: "OUT", uc1: { symbol: "◎", unicode: "U+25CE", txt: "Outcome" } }
+    ⇌: { role: "TXN", uc1: { symbol: "⇌", unicode: "U+21CC", txt: "Transaction" } }
+
+    # Active directives
+    📚: { role: "DCL", uc1: { symbol: "📚", unicode: "U+1F4DA", txt: "Domain" } }
+    ⚖: { role: "ETH", uc1: { symbol: "⚖", unicode: "U+2696", txt: "Ethics" } }
+    📜: { role: "POL", uc1: { symbol: "📜", unicode: "U+1F4DC", txt: "Policy" } }
+    ⛔: { role: "CST", uc1: { symbol: "⛔", unicode: "U+26D4", txt: "Constraint" } }

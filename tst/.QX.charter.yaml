@@ -1,0 +1,103 @@
+schema: qx.charter.v1
+about:
+  purpose: "Preserve and operationalize user intent via QX grammar; make parsing explicit and machine-readable."
+  scope: "Toggle QX parsing, map symbols to user memory (bio/cmem), and define feedback behavior."
+
+qx:
+  enabled: false            # authoritative switch; set true to activate QX mode
+  precedence:
+    order: ["yaml", "meta", "pua"]    # YAML beats page meta; meta beats PUA
+    on_conflict: "prefer_earlier"     # follow the precedence order above
+
+discovery:
+  # How a GPT should locate this charter quickly
+  meta_comment: 'QX:charter:v1'                 # must appear in an HTML comment on the page
+  yaml_hint_key: 'qx'                           # top-level key expected in this file
+  candidate_paths: ["./QX.charter.yaml", ".qx/charter.yaml", "./QX.yaml"]
+  fallback:
+    # If the charter file is missing, GPT should still degrade gracefully
+    assume_enabled_if_symbols_present: false    # remain OFF unless explicitly enabled
+    symbols_probe: ["⟡","◎","⇌","Ω","DCL","OUT","TXN","RES"]
+
+markers:
+  pua:
+    on:  "U+E001"      # optional hint for QX ON
+    off: "U+E000"      # optional hint for QX OFF
+  meta_defaults:
+    default_mode: "off"  # if only the meta comment is present and no YAML found, assume OFF
+
+grammar:
+  # Canonical symbols and their ASCII fallbacks
+  symbols:
+    declaration:
+      glyph: "⟡"
+      alias: ["DCL", "DECLARATION"]
+    outcome:
+      glyph: "◎"
+      alias: ["OUT", "OUTCOME"]
+    transaction:
+      glyph: "⇌"
+      alias: ["TXN", "TRANSACTION"]
+    resonance:
+      glyph: "Ω"
+      alias: ["RES", "RESONANCE"]
+
+  parse_rules:
+    - "When qx.enabled=true, search the page for blocks keyed by the symbols/aliases above."
+    - "Accept both glyphs and ASCII aliases; normalize to glyph keys in output."
+    - "If multiple DOTs exist, treat each as a distinct item with its own ID if provided."
+
+memory:
+  # How to match content to user's stored context
+  sources: ["bio", "cmem"]
+  match:
+    strategy: "id_or_label_then_similarity"
+    id_keys: ["id", "dom", "dot"]
+    min_similarity: 0.72
+  on_match:
+    bind: true
+    annotate: true
+  on_miss:
+    propose_binding: true
+    create_new_dot: "ask"
+
+output:
+  # How to feed results back to the user
+  format: "yaml"   # or "json"; models may offer both
+  include:
+    - "parsed_dots"        # normalized ⟡/◎/⇌/Ω blocks
+    - "bindings"           # what matched in bio/cmem
+    - "gaps"               # what could not be matched
+    - "next_actions"       # suggested binds/clarifications
+  present:
+    learn_more:
+      label: "Learn more about QX notation"
+      url: "https://github.com/<your-repo>/QX-spec"
+    show_repo: true        # explicitly present the GitHub page link
+    suggest_if_new_user: true
+
+error_handling:
+  missing_charter: "Proceed with qx.enabled=false unless explicit enable found."
+  conflicting_markers: "Follow precedence; include a note in output.conflicts."
+  unknown_symbols: "List under gaps. Ask for definition or ignore per user choice."
+
+security_ethics:
+  enforcement: "ETH > CST > POL > OUT > TXN"
+  notes:
+    - "Do not fabricate bindings; always mark similarity and source."
+    - "Respect user intent and privacy boundaries in memory linkage."
+
+# Optional: example of a parsed DOT this charter expects models to produce
+example_output:
+  parsed_dots:
+    - id: "DOT:SWIM-SAFETY-PROTOCOL"
+      ⟡: "Ensure open-water safety across all environments."
+      ◎: "Zero incidents, reliable gear & comms, environment assessed before each swim."
+      ⇌: ["Pre-swim checks", "Weekly drills", "Monthly no-device swim", "Post-swim log"]
+      Ω: ["Links to EQUIPMENT, SAFETY-LOGISTICS"]
+  bindings:
+    - target: "bio.cmem.DOT:SWIM-SAFETY-PROTOCOL"
+      similarity: 0.94
+  gaps: []
+  next_actions:
+    - "Confirm binding to existing DOT or create new one."

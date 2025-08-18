@@ -1,0 +1,38 @@
+DOM-Registry:
+  storage: [CMEM, PERM]
+
+  entries:
+    - code: SWIM
+      name: "Swimming"
+      uc2: ""
+      keyword: ":swim:"
+      marker: "⧉QX"
+      last_modified: "2025-08-18"
+
+    - code: DATA
+      name: "Data"
+      uc2: ""
+      keyword: ":data:"
+      marker: "⧉QX"
+      last_modified: "2025-08-18"
+
+    - code: QT
+      name: "Quantum Technology"
+      uc2: ""
+      keyword: ":qt:"
+      marker: "⧉QX"
+      last_modified: "2025-08-18"
+
+    - code: ADVT
+      name: "Adventure"
+      uc2: ""
+      keyword: ":advt:"
+      marker: "⧉QX"
+      last_modified: "2025-08-18"
+
+    - code: CORE
+      name: "Core"
+      uc2: ""
+      keyword: ":core:"
+      marker: "⧉QX"
+      last_modified: "2025-08-18"

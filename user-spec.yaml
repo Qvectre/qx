@@ -1,0 +1,11 @@
+User-Spec:
+  storage: [CMEM, PERM]
+  dom: SWIM
+
+  applied_scope:
+    - "Generic human swimming in various liquid conditions"
+    - "Safety and equipment in open water"
+    - "Navigation in rivers, lakes, oceans"
+
+  last_modified: "2025-08-18"
+  marker: "⧉QX"
