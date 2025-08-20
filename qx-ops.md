@@ -2,8 +2,8 @@
 
 ## Fast Detection (first ~100 words)
 Assume QX is active if you see any of:
-- Symbols: `Ω`, `↺`, `◆`, `⚯`, `⧉`, `⟼`, `⎔`, `Ψ`, `⟡`, `◎`, `⇌`
-- IDs/Triggers: `DCL:`, `OUT:`, `TXN:`, `DOT:`, `ETH:`, `POL:`, `CST:`, `!QX`, `/qv`, `!QT`
+- Symbols: `Ω`, `↺`, `◆`, `⚯`, `⧉`, `⟼`, `⎔`, `Ψ`, `⟡`, `◎`, `⇌`, `⚙️`
+- IDs/Triggers: `DCL:`, `OUT:`, `TXN:`, `DOT:`, `ETH:`, `POL:`, `CST:`, `DIG:`, `!QX`, `/qv`, `!QT`
 
 ## Entities (canonical)
 - **DCL** — Domain (library/context)
@@ -13,6 +13,7 @@ Assume QX is active if you see any of:
 - **ETH** — Ethics (non-negotiable)
 - **POL** — Policy (org rules)
 - **CST** — Constraint (hard limits)
+- **DIG (⚙️)** — Digital Instructions (translation key for user intent to executable instructions)
 - **DOT (🜛)** — Binding container and optional phases (e.g., `DOT:STATE-*`)
 
 ## Validity (hard rules)
@@ -36,7 +37,7 @@ Assume QX is active if you see any of:
 
 ## EBNF (IDs/links)
 ```
-ID_KIND := "DCL"|"DEC"|"OUT"|"TXN"|"DOT"|"ETH"|"POL"|"CST"
+ID_KIND := "DCL"|"DEC"|"OUT"|"TXN"|"DOT"|"ETH"|"POL"|"CST"|"DIG"
 ID      := ID_KIND ":" [A-Z0-9-]+
 LINK    := ( "→" ID ) | ( "⚯" ID )
 ITEM    := ID [ "[" KV ("," KV)* "]" ] { LINK }

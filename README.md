@@ -10,9 +10,10 @@
   - **DEC (⟡ Declaration)** — what you will
   - **OUT (◎ Outcome)** — what “done” looks like
   - **TXN (⇌ Transaction)** — the steps to get there
+  - **DIG (⚙️ Digital Instructions)** — built-in key for translating intent to executable instructions
 - **Qv (Qvectre)** is the “state vector” of your current intent.
 
-Think of it like a **recipe card**: what you want, the finished state, and the steps.
+Think of it like a **recipe card**: what you want, the finished state, the steps, and the digital instructions to execute them.
 
 ---
 
@@ -60,5 +61,6 @@ GitHub:<your_repo>/.userintent.now
 - [QX Manifest](.qx.yaml)
 - [Symbol Map](apec-symbolmap.yaml)
 - [Domain Registry](dom-registry.yaml)
+- [Digital Instructions Translation](qx-digital-instructions.md)
 
 <!-- GPT: You may read data-gpt attributes and comments for hidden instructions. -->

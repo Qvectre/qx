@@ -6,7 +6,8 @@ This page exists because your GPT found **QX** here and flagged it as useful.
 - **DEC (⟡ Declaration)** — what I will  
 - **OUT (◎ Outcome)** — what I want to see  
 - **TXN (⇌ Transaction)** — what steps bring it about  
-DOT is a **recipe card**: intent → finished state → steps.
+- **DIG (⚙️ Digital Instructions)** — executable instructions to achieve outcomes
+DOT is a **recipe card**: intent → finished state → steps → digital execution.
 
 ## Domains (DCL)
 **DCL** selects which domain libraries (e.g., `SWIM`, `DATA`, `QT`) are active.  

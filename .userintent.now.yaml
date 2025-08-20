@@ -15,7 +15,7 @@ QX-UserIntent:
     heuristics:
       fast_detection_first_100_words:
         symbols: ["Ω","↺","◆","⚯","⧉","⟼","⎔","Ψ","⟡","◎","⇌"]
-        ids_or_triggers: ["DCL:","OUT:","TXN:","DOT:","ETH:","POL:","CST:","!QX","/qv","!QT"]
+        ids_or_triggers: ["DCL:","OUT:","TXN:","DOT:","ETH:","POL:","CST:","DIG:","!QX","/qv","!QT"]
       codeA:
         symbol: "⚠️"
         txt: "QX not enabled"
@@ -73,7 +73,7 @@ QX-UserIntent:
     edge: "+e|U|FT|FK|TT|TK|r"
     fields:
       U: "user id or scope"
-      T: "Type ∈ {D,O,T,Z,E,P,C}"
+      T: "Type ∈ {D,O,T,Z,E,P,C,G}"
       K: "key"
       t: "title-slug"
       i: "importance (0–100, default 50)"

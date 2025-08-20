@@ -56,3 +56,10 @@
     txt: "Hard limits (safety, capability, scope, resources)"
     metrics: { type: ["safety", "capability"], failure_mode: "fail-closed" }
     dates: {}
+
+  ⚙️ DIG (Digital Instructions):
+    id: DIG:...
+    uc1: { symbol: "⚙️", unicode: "U+2699", txt: "Digital Instructions" }
+    txt: "Translation key for converting user intent into executable digital instructions"
+    metrics: { translation_format: ["API", "CLI", "JSON", "script"], target_system: "" }
+    dates: {}

@@ -1,0 +1,69 @@
+🜛 DOT:EXAMPLE-WEBAPP-DEPLOY
+  id: DOT:EXAMPLE-DEPLOY
+  uc1: { symbol: "🜛", unicode: "U+1F71B", txt: "DOT" }
+  txt: "Example: Deploy a web application with digital instructions"
+  metrics: {}
+  dates: { start: "2025-01-15", due: "2025-01-16" }
+  v: 1
+  state: active
+
+  ⟡ Declaration:
+    id: DEC:DEPLOY-WEBAPP
+    uc1: { symbol: "⟡", unicode: "U+27E1", txt: "Declaration" }
+    txt: "I will deploy a web application to production"
+    metrics: {}
+    dates: { start: "2025-01-15", due: "2025-01-16" }
+
+  ◎ Outcome:
+    id: OUT:APP-LIVE
+    uc1: { symbol: "◎", unicode: "U+25CE", txt: "Outcome" }
+    txt: "Web application is live and accessible to users"
+    metrics: { status: "planned", uptime: ">99%", response_time: "<200ms" }
+    dates: { due: "2025-01-16" }
+
+  ⇌ Transaction:
+    id: TXN:BUILD-DEPLOY
+    uc1: { symbol: "⇌", unicode: "U+21CC", txt: "Transaction" }
+    txt: "Build container image and deploy to cloud platform"
+    metrics: { kpi: "deployment successful" }
+    dates: { start: "2025-01-15", due: "2025-01-15" }
+
+  ⚙️ DIG (Digital Instructions):
+    id: DIG:DEPLOY-COMMANDS
+    uc1: { symbol: "⚙️", unicode: "U+2699", txt: "Digital Instructions" }
+    txt: "Executable commands to deploy the web application"
+    metrics: { translation_format: ["CLI"], target_system: "docker/kubernetes" }
+    dates: {}
+    instructions:
+      format: CLI
+      commands:
+        - "docker build -t myapp:latest ."
+        - "docker tag myapp:latest registry.example.com/myapp:latest"
+        - "docker push registry.example.com/myapp:latest"
+        - "kubectl apply -f deployment.yaml"
+        - "kubectl expose deployment myapp --type=LoadBalancer --port=80"
+        - "kubectl get service myapp --watch"
+      validation:
+        - "curl -f http://$(kubectl get service myapp -o jsonpath='{.status.loadBalancer.ingress[0].ip}')"
+
+  # --- Active Directives (binding) ---
+  📚 DCL (Domain):
+    id: DCL:DEVOPS
+    uc1: { symbol: "📚", unicode: "U+1F4DA", txt: "Domain" }
+    txt: "DevOps and deployment domain"
+    metrics: { bound_to: ["DEVOPS", "CLOUD"] }
+    dates: {}
+
+  ⚖ ETH (Ethics):
+    id: ETH:DATA-PRIVACY
+    uc1: { symbol: "⚖", unicode: "U+2696", txt: "Ethics" }
+    txt: "Ensure no sensitive data is exposed in deployment logs"
+    metrics: { enforcement: "strict" }
+    dates: {}
+
+  ⛔ CST (Constraint):
+    id: CST:BUDGET
+    uc1: { symbol: "⛔", unicode: "U+26D4", txt: "Constraint" }
+    txt: "Deployment costs must not exceed $50/month"
+    metrics: { type: ["budget"], failure_mode: "fail-closed" }
+    dates: {}
