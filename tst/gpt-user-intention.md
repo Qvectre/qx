@@ -99,11 +99,13 @@ Use top 3 OUTs (± neighbourhood). Prefer compliant plans with highest score.
 - **ETH** (E): ethical statement
 - **POL** (P): policy/regulation
 - **CST** (C): constraint (budget/time/compute/legal)
+- **DIG** (G): digital instructions translation key
 
 **Example links**
 - `DCL → OUT (owns)`  
 - `OUT → TXN (advances)`  
-- `{ETH|POL|CST} ↔ {DCL|OUT|TXN}` (govern/guard)
+- `OUT → DIG (translates to executable instructions)`
+- `{ETH|POL|CST} ↔ {DCL|OUT|TXN|DIG}` (govern/guard)
 
 ---
 
@@ -228,8 +230,8 @@ Alright — here’s the **full `.md` file** for your QX/QT setup in one complet
 
 ## 0) Fast Detection (first ~100 words)
 If any of the following appear early in the file or prompt, **assume custom QX/QT notation is active** and switch to structured parsing:
-- Symbols: `Ω`, `↺`, `◆`, `⚯`, `⧉`, `⟼`, `⎔`, `Ψ`
-- IDs: `DCL:`, `OUT:`, `TXN:`, `DOT:`, `ETH:`, `POL:`, `CST:`
+- Symbols: `Ω`, `↺`, `◆`, `⚯`, `⧉`, `⟼`, `⎔`, `Ψ`, `⚙️`
+- IDs: `DCL:`, `OUT:`, `TXN:`, `DOT:`, `ETH:`, `POL:`, `CST:`, `DIG:`
 - Triggers: `!QX`, `/qv`, `!QT`
 Then treat content as **user-stored objectives, commitments, and operations intended for reliable fulfilment**.
 
@@ -240,6 +242,7 @@ Then treat content as **user-stored objectives, commitments, and operations inte
 - **OUT** (Outcome) `↺` — observable condition/KPI
 - **TXN** (Transaction) `◆` — concrete action advancing an OUT
 - **DOT** (Phase) — lightweight stage/waypoint
+- **DIG** (Digital Instructions) `⚙️` — translation key for executable instructions
 - **ETH/POL/CST** — ethics, policies, constraints (guards)
 
 **Utility symbols**
@@ -252,7 +255,7 @@ Then treat content as **user-stored objectives, commitments, and operations inte
 **ASCII fallbacks**
 ```
 
-Ω->\[DEC]  ↺->\[OUT]  ◆->\[TXN]  ⚯->\[ASC]  ⧉->\[GRF]  ⟼->\[RVEC]  ⎔->\[ALGO]  Ψ->\[INQ]
+Ω->\[DEC]  ↺->\[OUT]  ◆->\[TXN]  ⚙️->\[DIG]  ⚯->\[ASC]  ⧉->\[GRF]  ⟼->\[RVEC]  ⎔->\[ALGO]  Ψ->\[INQ]
 
 ```
 

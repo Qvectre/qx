@@ -9,4 +9,6 @@ APEC: SymbolMap
   📜: { unicode: "U+1F4DC", shortcode: ":pol:", txt: "Policy" }
   ⛔: { unicode: "U+26D4",  shortcode: ":cst:", txt: "Constraint" }
 
+  ⚙️: { unicode: "U+2699", shortcode: ":dig:", txt: "Digital Instructions" }
+
   Ω:  { unicode: "U+03A9",  shortcode: ":res:", txt: "Resonance" }

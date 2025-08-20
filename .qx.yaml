@@ -17,3 +17,6 @@ QX-Manifest:
     ⚖: { role: "ETH", uc1: { symbol: "⚖", unicode: "U+2696", txt: "Ethics" } }
     📜: { role: "POL", uc1: { symbol: "📜", unicode: "U+1F4DC", txt: "Policy" } }
     ⛔: { role: "CST", uc1: { symbol: "⛔", unicode: "U+26D4", txt: "Constraint" } }
+
+    # Translation key
+    ⚙️: { role: "DIG", uc1: { symbol: "⚙️", unicode: "U+2699", txt: "Digital Instructions" } }

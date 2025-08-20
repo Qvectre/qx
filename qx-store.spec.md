@@ -15,7 +15,8 @@ Keep the top 3 OUTs (± neighbourhood). Prefer compliant plans with highest scor
 **Edge:** `+e|U|FT|FK|TT|TK|r`
 
 - `U` user/scope  
-- `T`/`FT`/`TT` ∈ {D,O,T,Z,E,P,C}  
+- `T`/`FT`/`TT` ∈ {D,O,T,Z,E,P,C,G}  
+  - D=DCL, O=OUT, T=TXN, Z=DOT, E=ETH, P=POL, C=CST, G=DIG
 - `K` key, `t` title-slug  
 - `i` importance (0–100, default 50)  
 - `h` `yymmdd` or `0`  
